@@ -1,6 +1,5 @@
 "use client"
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "lucide-react";
 
 export default function OngoingProject() {
     return (
