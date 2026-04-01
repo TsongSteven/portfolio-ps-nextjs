@@ -28,7 +28,7 @@ export default function About() {
                     <div className="mt-8">
                         <Button>
                             <EnvelopeIcon />
-                            <Link href="/">
+                            <Link href="mailto:pranansubba@gmail.com">
                                 Contact</Link>
                         </Button>
                     </div>
