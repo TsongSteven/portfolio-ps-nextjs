@@ -16,8 +16,8 @@ export default function Header() {
                     <Link href='/#skills' className='text-sm/6 font-semibold'>Skills</Link>
                     <Link href='/#projects' className='text-sm/6 font-semibold'>Projects</Link>
                     <Link href='/#ongoing-project' className='text-sm/6 font-semibold'>Ongoing-project</Link>
-                    <Link href='/contact' className='text-sm/6 font-semibold'>Contact</Link>
-                    <ThemeToggle />
+                    {/* <Link href='/contact' className='text-sm/6 font-semibold'>Contact</Link>
+                    <ThemeToggle /> */}
                 </div>
             </nav>
         </header>

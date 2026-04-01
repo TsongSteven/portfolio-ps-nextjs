@@ -12,42 +12,42 @@ export default function Skills() {
             <div className="grid grid-cols-12 gap-8 mt-10">
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <MdOutlinePhp className="h-25 w-auto" />
                         </CardContent>
                     </Card>
                 </div>
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <DiSymfony className="h-25 w-auto" />
                         </CardContent>
                     </Card>
                 </div>
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <FaGithub className="h-25 w-auto" />
                         </CardContent>
                     </Card>
                 </div>
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <FaDocker className="h-25 w-auto" />
                         </CardContent>
                     </Card>
                 </div>
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <RiNextjsLine className="h-25 w-auto" />
                         </CardContent>
                     </Card>
                 </div>
                 <div className="col-span-12 md:col-span-2">
                     <Card>
-                        <CardContent>
+                        <CardContent className="flex justify-center items-center">
                             <DiRedis className="h-25 w-auto" />
                         </CardContent>
                     </Card>

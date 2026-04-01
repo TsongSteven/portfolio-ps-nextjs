@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import z, { email } from "zod";
 import { loginAction } from "./actions";
-import { toast } from "sonner"
 import { useState } from "react";
 
 const formSchema = z.object({

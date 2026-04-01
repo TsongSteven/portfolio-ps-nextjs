@@ -2,7 +2,7 @@ import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { verifyPassword } from "@/lib/password"
 import getUserByEmail from "@/lib/user"
- 
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Credentials({
@@ -16,27 +16,22 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
           const user = await getUserByEmail(credentials.email as string)
 
-          console.log("USER:", user);
-
           if (!user) {
-            console.log("User not found");
             return null;
           }
-  
+
           const isValid = await verifyPassword(
-              credentials.password as string,
-              user.password
+            credentials.password as string,
+            user.password
           )
-          
-          console.log("PASSWORD VALID:", isValid);
+
           if (!isValid) return null
 
           return {
-              id : user.id,
-              email: user.email
+            id: user.id,
+            email: user.email
           }
         } catch (error) {
-          console.error("Auth error:", error); 
           return null;
         }
       },
@@ -48,4 +43,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
     signIn: "/auth",
   },
+  callbacks: {
+    jwt({ token, user }) {
+      if (user) {
+        token.sub = user.id
+      }
+
+      return token
+    },
+    session({ session, token, user }) {
+      if (token.sub) {
+        session.user.id = token.sub 
+      }
+      return session
+    }
+  }
 })

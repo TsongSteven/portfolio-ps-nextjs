@@ -12,19 +12,19 @@ export default function Hero() {
             <div className="mt-7">
                 <Button>
                     <LinkedinLogoIcon />
-                    <Link href='/'>
+                    <Link href='https://www.linkedin.com/in/pranan-subba-348848129/' target="_blank">
                         LinkedIn
                     </Link>
                 </Button>
                 <Button className="ms-2">
                     <GithubLogoIcon />
-                    <Link href='/'>
+                    <Link href='https://github.com/TsongSteven' target="_blank">
                         GitHub
                     </Link>
                 </Button>
                 <Button className="ms-2">
                     <ReadCvLogoIcon />
-                    <Link href='/'>
+                    <Link href='/cv/PrananSubba.pdf' target="_blank">
                         Resume
                     </Link>
                 </Button>
