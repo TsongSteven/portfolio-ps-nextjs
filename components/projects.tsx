@@ -28,7 +28,7 @@ export default function Projects() {
                                     {project.project_description}
                                 </p>
                                 <Button>
-                                    <Link href="/">Visit</Link>
+                                    <Link href={project.url} target="_blank">Visit</Link>
                                 </Button>
                             </div>
                         </div>
