@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer>
             <Separator />
-            <div className='bg-white mt-10 mb-10'>
+            <div className='mt-10 mb-10'>
                 <div className='text-center'>
                     <div className='mb-5 gap-4'>
                         <Button>
