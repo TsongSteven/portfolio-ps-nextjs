@@ -26,7 +26,6 @@ const blogSchema = z.object({
 
 
 export default function BlogForm({ blogData }: { blogData?: any }) {
-    console.log(blogData.title);
     const form = useForm<z.infer<typeof blogSchema>>({
         resolver: zodResolver(blogSchema),
         defaultValues: {
