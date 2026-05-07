@@ -40,7 +40,7 @@ export default function AdminSidebar() {
                         </SidebarMenuItem>
                         <SidebarMenuItem>
                             <SidebarMenuButton className="flex items-center gap-2">
-                                <Link href='/' className="flex items-center gap-2 w-full">
+                                <Link href='/admin/messages' className="flex items-center gap-2 w-full">
                                     <EnvelopeIcon className="mr-2 h-4 w-4" />
                                     <span>Messages</span>
                                 </Link>

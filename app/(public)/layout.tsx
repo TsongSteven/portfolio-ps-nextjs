@@ -7,6 +7,7 @@ import Providers from "@/components/providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Toaster } from "sonner";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Header />
           <main>
             {children}
+            <Toaster position="top-right" />
           </main>
           <Footer />
         </Providers>
