@@ -37,9 +37,9 @@ export default async function Blogs() {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {posts.map((post) => (
+                    {posts.map((post, index) => (
                         <TableRow key={post.id}>
-                            <TableCell className="font-medium">1</TableCell>
+                            <TableCell className="font-medium">{index + 1}</TableCell>
                             <TableCell>{ post.title }</TableCell>
                             <TableCell>{ new Date(post.createdAt).toLocaleString() }</TableCell>
                             <TableCell>{ post.published ? 'Published' : 'Not published' }</TableCell>

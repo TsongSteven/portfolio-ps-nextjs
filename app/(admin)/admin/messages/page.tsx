@@ -32,9 +32,9 @@ export default async function Blogs() {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {messages.map((message) => (
+                    {messages.map((message, index) => (
                         <TableRow key={message.id}>
-                            <TableCell className="font-medium">1</TableCell>
+                            <TableCell className="font-medium">{index + 1}</TableCell>
                             <TableCell>{ message.fullName }</TableCell>
                             <TableCell>{ message.email }</TableCell>
                             <TableCell>{ message.isRead ? 'Yes' : 'No' }</TableCell>
