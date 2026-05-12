@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import getUserByEmail from '@/lib/user';
 import slugify from 'slugify';
 
-export default async function editBlog(title: string, content: string, blogId: string) {
+export default async function editBlog(title: string, post_type: string, content: string, blogId: string) {
 
     const session = await auth()
 
@@ -24,6 +24,7 @@ export default async function editBlog(title: string, content: string, blogId: s
             title: title,
             content: content,
             slug: slugify(title),
+            postType: post_type,
             authorId: user?.id
         }
     })
