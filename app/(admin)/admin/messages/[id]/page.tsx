@@ -1,5 +1,3 @@
-"use server";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { fetchMessage, readMessage } from "@/lib/fetch-message";
 import deleteMessage from "@/lib/delete-message";
-
+export const revalidate = 0;
 export default async function viewMsg({
   params,
 }: {
@@ -32,7 +30,9 @@ export default async function viewMsg({
         <CardContent>{msg?.msg}</CardContent>
         <CardFooter>
           <form action={deleteMessage.bind(null, id)}>
-            <Button variant={"destructive"} type="submit">Delete</Button>
+            <Button variant={"destructive"} type="submit">
+              Delete
+            </Button>
           </form>
         </CardFooter>
       </Card>
