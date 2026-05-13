@@ -27,6 +27,7 @@ export default async function Blogs() {
                         <TableHead className="w-25">ID</TableHead>
                         <TableHead>Fullname</TableHead>
                         <TableHead>Email</TableHead>
+                        <TableHead>Date</TableHead>
                         <TableHead>Is Read?</TableHead>
                         <TableHead className="text-right">Action</TableHead>
                     </TableRow>
@@ -37,6 +38,7 @@ export default async function Blogs() {
                             <TableCell className="font-medium">{index + 1}</TableCell>
                             <TableCell>{ message.fullName }</TableCell>
                             <TableCell>{ message.email }</TableCell>
+                            <TableCell>{ new Date(message.createdAt).toLocaleDateString() }</TableCell>
                             <TableCell>{ message.isRead ? 'Yes' : 'No' }</TableCell>
                             <TableCell className="text-right">
                                 <Button variant={"default"}>
