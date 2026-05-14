@@ -16,7 +16,11 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { logout } from "@/lib/logout";
 
-export default function AdminSidebar() {
+interface AdminSidebarProps {
+  count: number;
+}
+
+export default function AdminSidebar({count} : AdminSidebarProps) {
   return (
     <Sidebar>
       <SidebarHeader />
@@ -50,7 +54,7 @@ export default function AdminSidebar() {
                   className="flex items-center gap-2 w-full"
                 >
                   <EnvelopeIcon className="mr-2 h-4 w-4" />
-                  <span>Messages</span>
+                  <span>Messages ({count})</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

@@ -44,9 +44,9 @@ export default async function Blogs() {
                                 <Button variant={"default"}>
                                     <Link href={`/admin/messages/${message.id}`}>View</Link>
                                 </Button>
-                                <Button variant={"destructive"}>
+                                {/* <Button variant={"destructive"}>
                                     <Link href="">Delete</Link>
-                                </Button>
+                                </Button> */}
                             </TableCell>
                         </TableRow>
                     ))}
