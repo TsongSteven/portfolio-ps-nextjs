@@ -1,22 +1,25 @@
 "use server"
 
+import { revalidatePath } from "next/cache";
 import { db } from "./prisma";
 
-export async function fetchMessage(id : string) {
+export async function fetchMessage(id: string) {
     return await db.message.findUnique({
-        where : {
+        where: {
             id: id
         }
     })
 }
 
-export async function readMessage(id : string) {
+export async function readMessage(id: string) {
     return await db.message.update({
-        where : {
+        where: {
             id: id
         },
         data: {
             isRead: true
         }
     })
+    revalidatePath("/admin/messages");
+    revalidatePath(`/admin/messages/${id}`);
 }
