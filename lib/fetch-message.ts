@@ -1,6 +1,5 @@
 "use server"
 
-import { revalidatePath } from "next/cache";
 import { db } from "./prisma";
 
 export async function fetchMessage(id: string) {
