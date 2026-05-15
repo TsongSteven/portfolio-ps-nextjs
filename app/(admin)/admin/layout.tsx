@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import React from "react";
 import './../../globals.css';
 import getNoOfUnreadMsgs from "@/lib/unread-messages";
+export const dynamic = 'force-dynamic';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
