@@ -1,6 +1,5 @@
 "use server"
 
-import { revalidatePath } from "next/cache";
 import { db } from "./prisma";
 
 export default async function fetchMessages() {
@@ -9,5 +8,4 @@ export default async function fetchMessages() {
             createdAt: 'desc'
         }
     });
-    revalidatePath("/admin/messages");
 }
