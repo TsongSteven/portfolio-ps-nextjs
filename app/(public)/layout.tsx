@@ -8,6 +8,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Toaster } from "sonner";
+export const dynamic = 'force-dynamic';
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 

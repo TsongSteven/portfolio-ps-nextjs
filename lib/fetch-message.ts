@@ -20,6 +20,4 @@ export async function readMessage(id: string) {
             isRead: true
         }
     })
-    revalidatePath("/admin/messages");
-    revalidatePath(`/admin/messages/${id}`);
 }

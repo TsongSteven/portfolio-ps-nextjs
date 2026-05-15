@@ -1,6 +1,5 @@
 "use server"
 
-import { redirect } from "next/navigation";
 import { db } from "./prisma";
 
 export default async function saveMsg(full_name: string, email: string, message: string) {
