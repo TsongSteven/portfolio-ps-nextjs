@@ -27,4 +27,11 @@ export const projects = [
         url: "https://rosekosujaw.com/",
         project_description: "Rosekosujaw is a counselling web application founded by Roseline Lepcha, an educator and student counsellor dedicated to guiding young minds. It helps students discover their strengths, choose the right courses, and make informed career decisions with confidence. The platform also offers stress support, creating a safe and encouraging environment for personal growth. Built with Symfony 7, Symfony UX, Live Components, and Razorpay integration, it delivers a seamless and reliable user experience."
     },
+    {
+        id: 5,
+        image_path: "/projects/hills-and-wheels.JPG",
+        project_title: "Hills and Wheels",
+        url: "https://hillsandwheels.in/",
+        project_description: "Hills and Wheels is a travel website dedicated to providing unique and memorable experiences in the mountains and on the wheels. Built with Symfony 7, it offers a seamless platform for planning and booking adventures. The platform also includes a powerful admin section for managing bookings, creating and managing tour packages, and building detailed tour itineraries."
+    },
 ]
