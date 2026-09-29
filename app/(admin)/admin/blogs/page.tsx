@@ -1,4 +1,3 @@
-"use server";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/table";
 import fetchPosts from "@/lib/fetch-posts";
 import deletePost from "@/lib/delete-post";
+export const dynamic = 'force-dynamic';
 
 export default async function Blogs() {
   const posts = await fetchPosts();
