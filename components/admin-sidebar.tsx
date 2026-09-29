@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { EnvelopeIcon } from "@phosphor-icons/react";
-import { Home, List } from "lucide-react";
+import { Home, List, ListCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { logout } from "@/lib/logout";
@@ -44,6 +44,17 @@ export default function AdminSidebar({count} : AdminSidebarProps) {
                 >
                   <List className="mr-2 h-4 w-4" />
                   <span>Blogs</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton className="flex items-center gap-2">
+                <Link
+                  href="/admin/vision-board"
+                  className="flex items-center gap-2 w-full"
+                >
+                  <ListCheckIcon className="mr-2 h-4 w-4" />
+                  <span>Vison board</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
