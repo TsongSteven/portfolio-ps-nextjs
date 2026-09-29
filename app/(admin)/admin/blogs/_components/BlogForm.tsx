@@ -96,6 +96,7 @@ export default function BlogForm({ blogData }: { blogData?: any }) {
                       <SelectGroup>
                         <SelectItem value="Story">Story</SelectItem>
                         <SelectItem value="Blog">Blog</SelectItem>
+                        <SelectItem value="Vision Board">Vision Board</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
