@@ -1,8 +1,8 @@
 
-"use server";
 import "quill/dist/quill.snow.css";
 import fetchPosts from "@/lib/fetch-posts";
 import DOMPurify from "isomorphic-dompurify";
+export const dynamic = 'force-dynamic';
 
 export default async function VisionBoard() {
     const posts = await fetchPosts();
