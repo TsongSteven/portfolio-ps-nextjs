@@ -1,7 +1,7 @@
 
 import "quill/dist/quill.snow.css";
 import fetchPosts from "@/lib/fetch-posts";
-import DOMPurify from "isomorphic-dompurify";
+// import DOMPurify from "isomorphic-dompurify";
 export const dynamic = 'force-dynamic';
 
 export default async function VisionBoard() {
@@ -20,10 +20,11 @@ export default async function VisionBoard() {
                         Vision No {index + 1} : {post.title}
                     </h3>
                     <div className="ql-snow">
-                        <div
+                        {/* <div
                             className="ql-editor"
                             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
-                        />
+                        /> */}
+                        {post.content}
                     </div>
                 </div>
             ))}
