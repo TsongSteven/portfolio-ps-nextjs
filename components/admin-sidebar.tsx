@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Sidebar,
   SidebarContent,
@@ -15,6 +16,7 @@ import { Home, List, ListCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { logout } from "@/lib/logout";
+export const dynamic = 'force-dynamic';
 
 interface AdminSidebarProps {
   count: number;
