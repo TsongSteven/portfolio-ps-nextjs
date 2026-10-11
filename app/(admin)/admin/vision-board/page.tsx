@@ -1,6 +1,7 @@
 import "quill/dist/quill.snow.css";
 import fetchPosts from "@/lib/fetch-posts";
 import sanitizeHtml from "sanitize-html";
+import fetchVb from "@/lib/fetch-vb";
 
 export const dynamic = 'force-dynamic';
 
@@ -19,15 +20,14 @@ const sanitizeOptions: sanitizeHtml.IOptions = {
 };
 
 export default async function VisionBoard() {
-    const posts = await fetchPosts();
-    const visionBoardPosts = posts.filter((post) => post.postType === "Vision Board");
+    const posts = await fetchVb();
 
     return (
         <section className="mx-auto max-w-7xl items-center justify-between p-6 lg:px-8">
             <div className="bg-gray-300 p-2 rounded-xs mb-4">
                 My Vision Board
             </div>
-            {visionBoardPosts.map((post, index) => (
+            {posts.map((post, index) => (
                 <div
                     key={post.id}
                     className="rounded-2xl mt-4 border border-neutral-200 bg-white p-6 transition hover:border-neutral-300 hover:shadow-sm"
